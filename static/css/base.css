@@ -76,6 +76,12 @@ body {
     object-fit: cover; 
 }
 
+.logo-img {
+    max-width: 100%;
+    height: auto;
+}
+
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

@@ -28,5 +28,10 @@
     "pk": 6,
     "model": "products.category",
     "fields": { "name": "deals", "friendly_name": "Deals" }
+  },
+  {
+    "pk": 7,
+    "model": "products.category",
+    "fields": { "name": "clearance", "friendly_name": "Clearance" }
   }
 ]
