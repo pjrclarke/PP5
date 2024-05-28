@@ -1,0 +1,65 @@
+[
+    {
+      "model": "products.product",
+      "pk": 1,
+      "fields": {
+        "sku": "bubble_black",
+        "name": "Bespoke commission - Black",
+        "description": "A bold and exemplary look into the dystopian future",
+        "price": "200.00",
+        "category": 1
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 2,
+      "fields": {
+        "sku": "leafy",
+        "name": "Bespoke commission - Leafy",
+        "description": "",
+        "price": "200.00",
+        "category": 3
+      }
+    },
+    {
+      "model": "products.productimage",
+      "pk": 1,
+      "fields": {
+        "product": 1,
+        "image": "product_images/product_bubble_black/bubble_black1.jpg"
+      }
+    },
+    {
+      "model": "products.productimage",
+      "pk": 2,
+      "fields": {
+        "product": 1,
+        "image": "product_images/product_bubble_black/bubble_black2.jpg"
+      }
+    },
+    {
+      "model": "products.productimage",
+      "pk": 3,
+      "fields": {
+        "product": 1,
+        "image": "product_images/product_bubble_black/bubble_black3.jpg"
+      }
+    },
+    {
+      "model": "products.productimage",
+      "pk": 4,
+      "fields": {
+        "product": 2,
+        "image": "product_images/product_leafy/leafy1.jpg"
+      }
+    },
+    {
+      "model": "products.productimage",
+      "pk": 5,
+      "fields": {
+        "product": 2,
+        "image": "product_images/product_leafy/leafy2.jpg"
+      }
+    }
+  ]
+  
