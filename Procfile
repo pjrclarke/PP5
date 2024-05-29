@@ -1,1 +1,1 @@
-web: gunicorn PP5.wsgi:application
+web: gunicorn opais.wsgi:application
