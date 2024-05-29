@@ -40,6 +40,7 @@ In hindsight, I acknowledge that this project may be perceived as a retake. Neve
 - Create a review page where users can leave a review of the store. 
 - Full testing
 - Research more into how to fully progress this by incorporating API's from software used in the workshop
+- Business page set up
 
 ## Conclusion
 Despite the challenges, This project serves as a testament to resilience and determination. It highlights the importance of overcoming personal obstacles to achieve goals. Even though I was not able to complete what I wanted to accomplish. **Creating what I did in a day and a half hopefully shows some promise.**
