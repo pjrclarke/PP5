@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Product, Category
+from .models import *
+
 
 def all_products(request):
     products = Product.objects.all()
@@ -55,8 +56,15 @@ def all_products(request):
 
 def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
+    temple_lengths = range(125, 255, 5)
+    lens_options = LensOption.objects.all() 
+
+
     context = {
         'product': product,
+        'temple_lengths': temple_lengths,
+        'lens_options': lens_options,
+
     }
     
     return render(request, 'products/product_detail.html', context)

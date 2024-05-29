@@ -16,6 +16,14 @@ class Category(models.Model):
         return self.friendly_name
 
 
+class LensOption(models.Model):
+    colour = models.CharField(max_length=50)
+    description = models.TextField()
+
+    def __str__(self):
+        return self.colour
+
+
 class Product(models.Model):
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
@@ -29,7 +37,6 @@ class Product(models.Model):
     
 
 def product_image_upload_path(instance, filename):
-    # file will be uploaded to MEDIA_ROOT/product_<sku>/<filename>
     return os.path.join('product_images', f'product_{instance.product.sku}', filename)
 
 class ProductImage(models.Model):
@@ -39,4 +46,17 @@ class ProductImage(models.Model):
     def __str__(self):
         return f"Image for {self.product.name}"
 
-    
+class FrameSize(models.Model):
+    product = models.OneToOneField(Product, related_name='frame_size', on_delete=models.CASCADE)
+    a_measurement = models.DecimalField(max_digits=5, decimal_places=2, help_text="Size of frame per lens horizontally (in mm)")
+    b_measurement = models.DecimalField(max_digits=5, decimal_places=2, help_text="Size of frame per lens vertically (in mm)")
+    bridge_measurement = models.DecimalField(max_digits=5, decimal_places=2, help_text="Bridge measurement (in mm)")
+    temple_length = models.PositiveIntegerField(choices=[(i, f'{i} mm') for i in range(125, 255, 5)], help_text="Temple length (in mm)")
+
+    def __str__(self):
+        return f"{self.product.name} Frame Size"
+
+    class Meta:
+        verbose_name = "Frame Size"
+        verbose_name_plural = "Frame Sizes"
+        

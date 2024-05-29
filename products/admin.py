@@ -24,6 +24,10 @@ class CategoryAdmin(admin.ModelAdmin):
 admin.site.register(Product)
 admin.site.register(Category)
 admin.site.register(ProductImage)
+admin.site.register(FrameSize)
+admin.site.register(LensOption)
+
+
 
 
 

@@ -1,0 +1,1 @@
+web: gunicorn PP5.wsgi:application
