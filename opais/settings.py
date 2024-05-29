@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['127.0.0.1:8000', '127.0.0.1',  'localhost', 'https://opais-db0374dd611e.herokuapp.com/']
+ALLOWED_HOSTS = ['127.0.0.1:8000', '127.0.0.1',  'localhost', 'opais-db0374dd611e.herokuapp.com']
 
 
 # Application definition
